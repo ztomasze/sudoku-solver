@@ -1,19 +1,15 @@
 package ztomasze;
 
 import java.util.*;
-import javax.swing.*;
 
 /**
  * Solves Sudoku puzzles.
  * <p>
- * Original text-based version written in 3 hours, not counting algorithm
+ * Original version written in 3 hours, not counting algorithm
  * planning time.
- * <p>
- * Six months later, overhauled to run as GUI/applet.
  * 
  * @author Zach Tomaszewski
  * @since 09 Jun 2011
- * @version 04 Jan 2012
  */
 public class SudokuSolver {
 
@@ -165,7 +161,7 @@ class SudokuBoard {
    * <p>
    * Each newly-certain cell is processed. This means its value is marked off of
    * each other cell in the same row, column, and 3x3 square. If this reduces
-   * any other cell to a single possibility, that square becomes newly-certain
+   * any other cell to a single possibility, that cell becomes newly-certain
    * as well.
    * <p>
    * If, after all newly-certain cells have been processed, the board is solved,
@@ -274,8 +270,8 @@ class SudokuBoard {
 
   /**
    * Marks the given curr cell with the value taken from the given certain cell.
-   * If curr == certain, savely does nothing. If the change means the cell
-   * changes from uncertain to certan, will add it to the newly-certain stack.
+   * If curr == certain, safely does nothing. If the change means the cell
+   * changes from uncertain to certain, will add it to the newly-certain stack.
    */
   private void mark(Cell curr, Cell certain) {
     assert certain.isCertain();
@@ -393,16 +389,5 @@ class SudokuBoard {
     public String toString() {
       return "Cell(" + this.row + "," + this.col + ")" + this.possible;
     }
-  }
-  
-  
-  /**
-   * An input field and associated solve button, with error messages
-   * displayed in pop-ups.
-   * 
-   * @author Zach Tomaszewski
-   */
-  class SudokuGUI extends JPanel {
-    
   }
 }
