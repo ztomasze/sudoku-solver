@@ -191,7 +191,7 @@ class SudokuBoard {
     while (this.certain.size() > 0) {
       Cell cell = this.certain.pop();
 
-      // determine top-left cell of 3row3 square this cell is in
+      // determine top-left cell of 3x3 square this cell is in
       int squareRow, squareCol;
       if (cell.row <= 2) {
         squareRow = 0;
