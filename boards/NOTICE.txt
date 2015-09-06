@@ -1,0 +1,15 @@
+Sample boards came from the following places:
+
+* p096_sudoku.txt
+https://projecteuler.net/index.php?section=problems&id=96
+50 boards, all with unique solutions.  Converted from original format.
+
+* magictour
+http://www2.warwick.ac.uk/fac/sci/moac/people/students/peter_cock/python/sudoku/
+Includes a subset of files available there, originally from: http://magictour.free.fr/sudoku.htm
+msk_009 [Text file] - A set of 1011 random (mostly "easy") puzzles
+subig20 [Text file] - A very very large set of puzzles
+top95 [Text file] - A set of 95 "hard" puzzles, their favoured benchmark set 
+
+
+See also: http://norvig.com/sudoku.html
